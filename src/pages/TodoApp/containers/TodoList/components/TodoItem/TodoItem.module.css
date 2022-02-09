@@ -1,0 +1,68 @@
+.item {
+  width: 540px;
+  height: 30px;
+  padding: 0px 10px;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  align-content: center;
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgb(172, 49, 74);
+  border-radius: 10px;
+}
+.completed {
+  text-decoration: line-through;
+}
+.controlButtons {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  align-content: center;
+  gap: 5px;
+}
+.controlButtons button {
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 50%;
+  background-color: #582525;
+  cursor: pointer;
+}
+.controlButtons button svg {
+  width: 50%;
+  height: 50%;
+}
+.controlButtons button svg path {
+  fill: rgb(255, 240, 240);
+}
+.controlButtons input[type="checkbox"] {
+  width: 40px;
+  height: 20px;
+  position: relative;
+  border-radius: 10px;
+  background-color: rgb(255, 240, 240);
+  box-shadow: inset 0px 0px 4px 2px rgba(167, 57, 79, 0.623);
+  appearance: none;
+  cursor: pointer;
+}
+.controlButtons input[type="checkbox"]:checked {
+  background-color: rgba(211, 155, 166, 0.623);
+  box-shadow: inset 0px 0px 4px 2px rgba(165, 112, 122, 0.842);
+}
+.controlButtons input[type="checkbox"]::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: 50%;
+  background-color: rgba(163, 25, 53, 0.623);
+  box-shadow: inset 0px 0px 4px 2px rgba(58, 9, 19, 0.432);
+  transform: scale(1.1);
+  transition: all 400ms;
+}
+.controlButtons input[type="checkbox"]:checked::before {
+  left: 20px;
+}
